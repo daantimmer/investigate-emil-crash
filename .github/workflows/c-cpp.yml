@@ -1,0 +1,24 @@
+name: C/C++ CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        target: ["Host-VS2019-Broken", "Host-VS2019-Fixed"]
+        configuration: ["Debug", "RelWithDebInfo"]
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: configure and build
+      run: |
+        cmake --preset=${{ matrix.target }}
+        cmake --build --preset=${{ matrix.target }}-${{ matrix.configuration }}
