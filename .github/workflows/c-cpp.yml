@@ -9,10 +9,11 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-${{ matrix.os }}
     strategy:
       matrix:
-        target: ["Host-VS2022-Broken", "Host-VS2022-Fixed"]
+        os: [2019, 2022]
+        target: ["Broken", "Fixed"]
         configuration: ["Debug", "RelWithDebInfo"]
 
     steps:
@@ -20,15 +21,15 @@ jobs:
 
     - name: configure and build
       run: |
-        cmake --preset=${{ matrix.target }}
-        cmake --build --preset=${{ matrix.target }}-${{ matrix.configuration }}
+        cmake --preset=Host-VS${{ matrix.os }}-${{ matrix.target }}
+        cmake --build --preset=Host-VS${{ matrix.os }}-${{ matrix.target }}-${{ matrix.configuration }}
 
     - name: run executable
       run: |
-        build/${{ matrix.target }}/source/based-on-emil/${{ matrix.configuration }}/based-on-emil.exe
+        build/Host-VS${{ matrix.os }}-${{ matrix.target }}/source/based-on-emil/${{ matrix.configuration }}/based-on-emil.exe
 
-    - name: Upload a Build Artifact
-      uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce #v3.1.2
-      with:
-        name: ${{ matrix.target }}-${{ matrix.configuration }}-Full-Environment
-        path: .
+    # - name: Upload a Build Artifact
+    #   uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce #v3.1.2
+    #   with:
+    #     name: ${{ matrix.target }}-${{ matrix.configuration }}-Full-Environment
+    #     path: .
