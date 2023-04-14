@@ -23,19 +23,19 @@
             "inherits": "defaults"
         },
         {
-            "name": "Host-VS2019-Broken",
-            "displayName": "Configuration for Host-VS2019-Broken Tooling",
+            "name": "Host-VS2022-Broken",
+            "displayName": "Configuration for Host-VS2022-Broken Tooling",
             "inherits": "Host",
-            "generator": "Visual Studio 16 2019",
+            "generator": "Visual Studio 17 2022",
             "cacheVariables": {
                 "EMIL_GIT_HASH": "58dfa0a8265e15b96ad4696827a6baaa88080b5d"
             }
         },
         {
-            "name": "Host-VS2019-Fixed",
-            "displayName": "Configuration for Host-VS2019-Fixed Tooling",
+            "name": "Host-VS2022-Fixed",
+            "displayName": "Configuration for Host-VS2022-Fixed Tooling",
             "inherits": "Host",
-            "generator": "Visual Studio 16 2019",
+            "generator": "Visual Studio 17 2022",
             "cacheVariables": {
                 "EMIL_GIT_HASH": "72f9199cd58a40c24b47983133c28884628e0a07"
             }
@@ -43,33 +43,33 @@
     ],
     "buildPresets": [
         {
-            "name": "Host-VS2019-Broken-Debug",
+            "name": "Host-VS2022-Broken-Debug",
             "configuration": "Debug",
-            "configurePreset": "Host-VS2019-Broken",
+            "configurePreset": "Host-VS2022-Broken",
             "targets": [
                 "based-on-emil"
             ]
         },
         {
-            "name": "Host-VS2019-Broken-RelWithDebInfo",
+            "name": "Host-VS2022-Broken-RelWithDebInfo",
             "configuration": "RelWithDebInfo",
-            "configurePreset": "Host-VS2019-Broken",
+            "configurePreset": "Host-VS2022-Broken",
             "targets": [
                 "based-on-emil"
             ]
         },
         {
-            "name": "Host-VS2019-Fixed-Debug",
+            "name": "Host-VS2022-Fixed-Debug",
             "configuration": "Debug",
-            "configurePreset": "Host-VS2019-Fixed",
+            "configurePreset": "Host-VS2022-Fixed",
             "targets": [
                 "based-on-emil"
             ]
         },
         {
-            "name": "Host-VS2019-Fixed-RelWithDebInfo",
+            "name": "Host-VS2022-Fixed-RelWithDebInfo",
             "configuration": "RelWithDebInfo",
-            "configurePreset": "Host-VS2019-Fixed",
+            "configurePreset": "Host-VS2022-Fixed",
             "targets": [
                 "based-on-emil"
             ]

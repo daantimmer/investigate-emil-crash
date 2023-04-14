@@ -12,7 +12,7 @@ jobs:
     runs-on: windows-latest
     strategy:
       matrix:
-        target: ["Host-VS2019-Broken", "Host-VS2019-Fixed"]
+        target: ["Host-VS2022-Broken", "Host-VS2022-Fixed"]
         configuration: ["Debug", "RelWithDebInfo"]
 
     steps:
