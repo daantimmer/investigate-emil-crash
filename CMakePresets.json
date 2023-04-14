@@ -26,6 +26,7 @@
             "name": "Host-VS2019-Broken",
             "displayName": "Configuration for Host-VS2019-Broken Tooling",
             "inherits": "Host",
+            "generator": "Visual Studio 16 2019",
             "cacheVariables": {
                 "EMIL_GIT_HASH": "58dfa0a8265e15b96ad4696827a6baaa88080b5d"
             }
@@ -34,14 +35,16 @@
             "name": "Host-VS2019-Fixed",
             "displayName": "Configuration for Host-VS2019-Fixed Tooling",
             "inherits": "Host",
+            "generator": "Visual Studio 16 2019",
             "cacheVariables": {
-                "EMIL_GIT_HASH": "72f9199cd58a40c24b47983133c28884628e0a07"
+                "EMIL_GIT_HASH": "7e6800d7f6a97f49697ba2fcf180a9c83f92a69d"
             }
         },
         {
             "name": "Host-VS2022-Broken",
             "displayName": "Configuration for Host-VS2022-Broken Tooling",
             "inherits": "Host",
+            "generator": "Visual Studio 17 2022",
             "cacheVariables": {
                 "EMIL_GIT_HASH": "58dfa0a8265e15b96ad4696827a6baaa88080b5d"
             }
@@ -50,8 +53,9 @@
             "name": "Host-VS2022-Fixed",
             "displayName": "Configuration for Host-VS2022-Fixed Tooling",
             "inherits": "Host",
+            "generator": "Visual Studio 17 2022",
             "cacheVariables": {
-                "EMIL_GIT_HASH": "72f9199cd58a40c24b47983133c28884628e0a07"
+                "EMIL_GIT_HASH": "7e6800d7f6a97f49697ba2fcf180a9c83f92a69d"
             }
         }
     ],
